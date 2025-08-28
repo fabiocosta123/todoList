@@ -2,7 +2,7 @@
 
 Este é um aplicativo de lista de tarefas desenvolvido com **React**, **Vite** e **Tailwind CSS**. Ele permite que você gerencie suas tarefas de forma eficiente, com funcionalidades de adicionar, editar, excluir, marcar como concluída e filtrar.
 
-![Imagem de demonstração do aplicativo](https://i.imgur.com/uR2N8mC.png)
+![Imagem de demonstração do aplicativo](./src/assets/mockup.png)
 
 ## Funcionalidades
 
