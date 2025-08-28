@@ -11,7 +11,7 @@ function RemoverTarefa({ tarefaId, onRemover }: RemoverTarefaProps) {
   };
 
   return (
-    <button onClick={() => RemoverTarefa(t.id)}>
+    <button onClick={() => confirmarRemocao(t.id)}>
       <Trash size={20} color="#ef4444" weight="bold" />
     </button>
   );
