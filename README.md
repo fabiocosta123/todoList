@@ -1,69 +1,59 @@
-# React + TypeScript + Vite
+# To-Do List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um aplicativo de lista de tarefas desenvolvido com **React**, **Vite** e **Tailwind CSS**. Ele permite que você gerencie suas tarefas de forma eficiente, com funcionalidades de adicionar, editar, excluir, marcar como concluída e filtrar.
 
-Currently, two official plugins are available:
+![Imagem de demonstração do aplicativo](https://i.imgur.com/uR2N8mC.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## Expanding the ESLint configuration
+- **Adicionar Tarefa:** Insira uma nova tarefa no campo de texto e clique no botão de inclusão.
+- **Editar Tarefa:** Clique no ícone de edição para modificar uma tarefa. O texto da tarefa volta para o campo de digitação, o botão de inclusão é substituído por um botão de confirmação e um botão de cancelamento.
+- **Cancelar Edição:** Clique em "Cancelar" para descartar as alterações e manter o estado original da tarefa.
+- **Excluir Tarefa:** Clique no ícone de lixeira para remover uma tarefa da lista.
+- **Concluir Tarefa:** Clique no ícone de conclusão para marcar uma tarefa como finalizada. A borda da tarefa ficará verde para indicar que está concluída.
+- **Status da Tarefa:**
+  - Borda **vermelha:** Tarefa pendente.
+  - Borda **verde:** Tarefa concluída.
+- **Validação de Campo:** Um aviso de "campo vazio" é exibido caso você tente adicionar uma tarefa sem texto.
+- **Mensagens Toast:** Utiliza a biblioteca **react-toastify** para mostrar mensagens estilizadas e informativas sobre o status das ações (ex: tarefa adicionada, excluída, etc.).
+- **Pesquisa Dinâmica:** Pesquise tarefas em tempo real digitando no campo de busca. A lista é atualizada dinamicamente conforme você digita.
+- **Filtros:**
+  - **Todas:** Exibe todas as tarefas e a contagem total.
+  - **Concluídas:** Mostra apenas as tarefas concluídas e a contagem delas.
+  - **Pendentes:** Exibe somente as tarefas pendentes e a contagem delas.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnologias Utilizadas
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React:** Biblioteca JavaScript para construir a interface de usuário.
+- **Vite:** Ferramenta de build frontend que oferece uma experiência de desenvolvimento rápida.
+- **Tailwind CSS:** Framework CSS de utilitários que permite estilizar a aplicação rapidamente.
+- **React-Toastify:** Biblioteca para notificações "toast" estilizadas.
+- **React-Icons:** Biblioteca de ícones populares para React.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Como Executar o Projeto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2.  **Navegue até o diretório do projeto:**
+    ```bash
+    cd seu-repositorio
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+
+O aplicativo estará disponível em `http://localhost:5173`.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você encontrou um bug ou tem uma ideia para uma nova funcionalidade, sinta-se à vontade para abrir uma issue ou enviar um pull request.
